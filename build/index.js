@@ -102,9 +102,13 @@ var loader = async () => {
 };
 function Results() {
   const { owner, assets } = (0, import_react3.useLoaderData)();
-  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "gm"), /* @__PURE__ */ React.createElement("h1", null, owner), assets.map((nft) => /* @__PURE__ */ React.createElement("div", {
+  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "gm, ", owner), assets.map((nft) => /* @__PURE__ */ React.createElement("div", {
     key: nft.tokenId
-  }, /* @__PURE__ */ React.createElement("h3", null, "ImageURL: ", nft.imageUrl ? nft.imageUrl : "imageUrl not found"), /* @__PURE__ */ React.createElement("h4", null, nft.name ? nft.name : "name not found"), /* @__PURE__ */ React.createElement("p", null, "TokenID: ", nft.tokenId), /* @__PURE__ */ React.createElement("p", null, "TokenURL: ", nft.tokenUrl), /* @__PURE__ */ React.createElement("h4", null, "Collection Name:", " ", nft.collectionName ? nft.collectionName : "collectionName not found"), /* @__PURE__ */ React.createElement("p", null, "Symbol: ", nft.symbol), /* @__PURE__ */ React.createElement("p", null, "Type: ", nft.contractType), /* @__PURE__ */ React.createElement("p", null, "Contract Address: ", nft.contractAddress))));
+  }, /* @__PURE__ */ React.createElement("h3", null, nft.name ? nft.name : "name not found"), /* @__PURE__ */ React.createElement("h4", null, "Collection Name:", " ", nft.collectionName ? nft.collectionName : "collectionName not found"), /* @__PURE__ */ React.createElement("a", {
+    target: "_blank",
+    href: nft.imageUrl ? nft.imageUrl : "imageUrl not found",
+    rel: "noreferrer"
+  }, nft.imageUrl ? nft.imageUrl : "imageUrl not found"), /* @__PURE__ */ React.createElement("p", null, "Blockchain: ", nft.blockchain), /* @__PURE__ */ React.createElement("p", null, "TokenID: ", nft.tokenId), /* @__PURE__ */ React.createElement("p", null, "TokenURL: ", nft.tokenUrl), /* @__PURE__ */ React.createElement("p", null, "Symbol: ", nft.symbol), /* @__PURE__ */ React.createElement("p", null, "Type: ", nft.contractType), /* @__PURE__ */ React.createElement("p", null, "Contract Address: ", nft.contractAddress), /* @__PURE__ */ React.createElement("br", null))));
 }
 
 // route:/Users/joshstein/Documents/GitHub/ankr-multichain/app/routes/index.tsx
@@ -122,7 +126,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "1a7233e5", "entry": { "module": "/build/entry.client-ZKWJT4LP.js", "imports": ["/build/_shared/chunk-TQNWTK54.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-E74OD63S.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-EKJONMSH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/results": { "id": "routes/results", "parentId": "root", "path": "results", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/results-7OGILAVV.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-1A7233E5.js" };
+var assets_manifest_default = { "version": "564c4ee5", "entry": { "module": "/build/entry.client-ZKWJT4LP.js", "imports": ["/build/_shared/chunk-TQNWTK54.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-E74OD63S.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-EKJONMSH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/results": { "id": "routes/results", "parentId": "root", "path": "results", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/results-5Q422XAJ.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-564C4EE5.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

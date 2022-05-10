@@ -1,5 +1,11 @@
-node_modules
-.cache 
+/node_modules
+/.pnp
+.pnp.js
+/.cache
+/build
+/public/build
+.env
+/api/index.js
 public
 
 .DS_Store
