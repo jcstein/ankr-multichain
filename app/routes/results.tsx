@@ -6,9 +6,8 @@ const body = {
   jsonrpc: "2.0",
   method: "ankr_getNFTsByOwner",
   params: {
-    walletAddress:
-      "0x186Ea56F0a40c5593A697B3E804968b8C5920Ff3",
-    pageSize: 3,
+    walletAddress: "0x186Ea56F0a40c5593A697B3E804968b8C5920Ff3",
+    pageSize: 15,
     pageToken: "",
   },
   id: 1,
@@ -32,12 +31,20 @@ export default function Results() {
       {assets.map((nft: any) => (
         <div key={nft.tokenId}>
           <h3>
-            {nft.imageUrl
-              ? nft.imageUrl
-              : "imageUrl not found"}
+            ImageURL: {nft.imageUrl ? nft.imageUrl : "imageUrl not found"}
           </h3>
-          <p>{nft.tokenUrl}</p>
-          <p>{nft.collectionName}</p>
+          <h4>{nft.name ? nft.name : "name not found"}</h4>
+          <p>TokenID: {nft.tokenId}</p>
+          <p>TokenURL: {nft.tokenUrl}</p>
+          <h4>
+            Collection Name:{" "}
+            {nft.collectionName
+              ? nft.collectionName
+              : "collectionName not found"}
+          </h4>
+          <p>Symbol: {nft.symbol}</p>
+          <p>Type: {nft.contractType}</p>
+          <p>Contract Address: {nft.contractAddress}</p>
         </div>
       ))}
     </div>
